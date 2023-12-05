@@ -1,0 +1,80 @@
+EXPLICACCIONA DETALLE DEL PROYECTO 
+
+--NOMBRE AppLaravel 
+
+--EN LA CARPETA HTTP EN CONTROLLER
+
+AHI SE ENCUENTRAN LOS CONTROLADORES DE CADA TABLA PUBLICIDAD y PROMOCION
+AHI SE ENCUENTRAN LOS FUNCIONES Y PROCEDIMIENTOS DEL CRUD DE CADA TABLA 
+
+EN LA CARPETA RESOURCES EN VIEWS HAY UNA CARPETA CREADA LLAMADA PAGINAS AHI SE ENCUENTRAN 
+LAS VISTAS DE CADA UNO DE LAS TABLAS DEL MODULO CON SUS RESPECTIVOS NOMBRES
+
+--EXPLICACION MAS A DETALLE CON LA TABLA PUBLICIDAD
+
+1)SELECTPUBLICIDAD.BLADE.PHP=CONTIENE EN ELLA EL FORMULARIO DE CREAR FORMULARIO Y MOSTRAR LOS DATOS QUE 
+YA ESTAN GUARDADOS AHI MISMO DA LAS REF DE UPDATE Y DELETE Y ALGUNOS ESTILOS DE COLORES Y BOTONES  
+
+2)CREARPUBLICIDAD.BLADE.PHP=AHI CONTIENE LA RUTA PARA LLENAR NUEVO FORMULARIO
+
+3)UPDATEPUBLICIDAD.BLADE.PHP= CONTIENE LA DE ACTUALIZAR
+
+4)FLASH.BLADE.PHP=AHI CONTIENE MENSAJE QUE DA EN LA ELIMINACION DE UN REGISTRO
+
+
+Y HACI ES LO MISMO CON LAS DEMAS TABLAS CLARO SOLO SE MODIFICAN NOMBRES PARA
+QUE NO SE REFERENCIEN LAS MISMAS
+
+
+Y EN LA CARPETA ROUTES EN EL ARCHIVO WEB.PHP CONTIENE TODAS LAS RUTAS DE LAS TABLAS Y CRUD
+
+
+EN LA CARPETA CONFIG  EN ESTA SECCION EN ADMINTLE
+
+-ESTA EL ESTILO DEL MENU DEL MODULO PUBLICIDAD
+
+'menu' => [
+        // Navbar items:
+        [
+            'type'         => 'navbar-search',
+            'text'         => 'search',
+            'topnav_right' => true,
+        ],
+        [
+            'type'         => 'fullscreen-widget',
+            'topnav_right' => true,
+        ],
+
+        // Sidebar items:
+        [
+            'type' => 'sidebar-menu-search',
+            'text' => 'search',
+        ],
+        [
+            'text' => 'blog',
+            'url'  => 'admin/blog',
+            'can'  => 'manage-blog',
+        ],
+      
+      
+       
+       
+        [
+            'text'    => 'PUBLICIDAD',
+            'icon'    => 'fas fa-fw fa-share',
+            'submenu' => [
+                [
+                    'text' => 'Publicidad',
+                    'url'  => '/publicidad',
+                ],
+                [
+                    'text'    => 'Promocion',
+                    'url'     => '/promocion',
+                    
+                ],
+  
+  
+            ],
+        ],
+       
+    ],
